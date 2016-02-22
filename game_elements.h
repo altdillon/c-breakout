@@ -44,6 +44,8 @@ namespace game_elements
         void deflectOffBat(); //makes the vall mounce off of something
         void ballHitBlock(vector<Sprite*> sprites); //when a collision happens between a ball and something else
         void ballDeflectOffBlock(); //called when a ball deflects off of a block
+        bool hitWall_X(); //returns true if the ball bounced off of the x walls
+        bool hitWall_Y(); //returns true of the ball bounced off any of they y walls
 
     private:
         int screenSizeX;

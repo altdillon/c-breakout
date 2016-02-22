@@ -145,8 +145,9 @@ void Gamewindow::inut_game_elems()
 
     //...you know... those picture things
 
-    gameBall=new Ball("./sprites/paddle.png",screenSizeX/2,screenSizeY/2,screenSizeX,screenSizeY,5,4);
+    gameBall=new Ball("./sprites/paddle.png",screenSizeX/2,screenSizeY/2,screenSizeX,screenSizeY,-5,-4);
     gameBat=new Bat("./sprites/bat.png",screenSizeX/2,((screenSizeY/2)+100),screenSizeX,screenSizeY);
+    //gameBall2=new Ball("./sprites/paddle.png",screenSizeX/2,screenSizeY/2,screenSizeX,screenSizeY,-3,-6);
 
     //generate out blocks to shoot at
     generateBlocks(17,9); //we have an x,y array of blocks to knock out
@@ -165,6 +166,7 @@ void Gamewindow::inut_game_elems()
 
     gameSprites.push_back(gameBall);
     gameSprites.push_back(gameBat);
+    //gameSprites.push_back(gameBall2);
     //gameSprites.push_back(testBlock);
 
     //I'm gonna hold back on the background for awhile

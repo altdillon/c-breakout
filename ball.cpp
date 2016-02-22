@@ -22,7 +22,7 @@ bool Ball::hitFloor()
 {
     bool did_hit_floor=false;
 
-    if(sp_pos.y>=(screenSizeY-5))
+    if(hitWall_Y() && sp_pos.y>0)
     {
         did_hit_floor=true;
     }
@@ -30,6 +30,7 @@ bool Ball::hitFloor()
     return did_hit_floor;
 }
 
+//change this: hit wall and bounce should be in two seprate methods.
 bool Ball::hitWall()
 {
     bool did_hit=false;
@@ -47,6 +48,30 @@ bool Ball::hitWall()
     }
 
     return did_hit;
+}
+
+bool Ball::hitWall_X()
+{
+    bool hit_wall=false;
+
+    if(sp_pos.x < 0 || sp_pos.x > (this->screenSizeX-sprite_sizeX))
+    {
+        hit_wall=true;
+    }
+
+    return hit_wall;
+}
+
+bool Ball::hitWall_Y()
+{
+    bool hit_wall=false;
+
+    if(sp_pos.y < 0 || sp_pos.y > (this->screenSizeY-sprite_sizeY))
+    {
+        hit_wall=true;
+    }
+
+    return hit_wall;
 }
 
 void Ball::changeSpeed(float speedX,float speedY)
