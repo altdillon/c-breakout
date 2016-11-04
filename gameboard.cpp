@@ -150,7 +150,7 @@ void Gamewindow::inut_game_elems()
     //gameBall2=new Ball("./sprites/paddle.png",screenSizeX/2,screenSizeY/2,screenSizeX,screenSizeY,-3,-6);
 
     //generate out blocks to shoot at
-    generateBlocks(17,9); //we have an x,y array of blocks to knock out
+    generateBlocks(18,20); //we have an x,y array of blocks to knock out, changed from 17,9
 
     //test code for generating blocks
     //Block *testBlock=new Block("./sprites/stone.png",0,0,0);

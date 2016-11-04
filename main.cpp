@@ -9,7 +9,7 @@ using namespace game_exceptions;
 int main()
 {
   cout << "starting a game window..." << endl;
-  Gamewindow breakout(850,500,60);
+  Gamewindow breakout(900,800,60);
 
   try
   {
